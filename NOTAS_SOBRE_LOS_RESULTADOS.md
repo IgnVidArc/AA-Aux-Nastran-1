@@ -29,3 +29,5 @@ la forma de usarlo está ahí demostrada, se dice una linea de inicio y cuántos
 hay que buscar a mano la línea en la que empiezan los valores para el nodo que nos interese, pero se hace fácil.
 
 el archivo tiene que leer el .pch que saca NASTRAN. en ese file le decíamos que nos imprimiera DESPLAZAMIENTOS, ACELERACIONES Y LOADS.
+
+# quedaría por definir en el **Task3_SOL112.dat** la load, que no me ha dado tiempo
