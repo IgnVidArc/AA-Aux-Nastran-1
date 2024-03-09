@@ -1,4 +1,13 @@
-%% TASK 3:
+%% TASK 3: EVOLUTION OF NATURAL FREQUENCIES WITH kCOUPLING:
+
+1.191159E+01
+2.140359E+01
+
+%%
+k1 = 3947.84;
+a = [0, .5, 1, 1.5, 2.5, 5, 50, 1000]';
+k = a*k1;
+
 % File:
 filename = 'Task2_SOL112.pch';
 % Line of first data entry to retrieve:
