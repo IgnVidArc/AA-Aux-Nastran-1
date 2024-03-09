@@ -14,13 +14,13 @@ CEND
 $
 $ ----------------------------- CASE CONTROL DECK ---------------------------- 
 $
-TITLE        = RESOLUTION OF TASK_1
+TITLE        = RESOLUTION OF TASK_3
 SUBTITLE     = RESONANCE FREQUENCIES
 LABEL        = ONE-DOF SPRING/MASS SYSTEM
 $
-SPC          =                 $ Call single-point constraint (SPC)
-METHOD       =                 $ Call eigenvalue extraction Method in order to extract Real Eigenvules.(EIGRL)
-DISPLACEMENT =                 $ print modal shape
+SPC          = 1000                $ Call single-point constraint (SPC)
+METHOD       = 2000                $ Call eigenvalue extraction Method in order to extract Real Eigenvules.(EIGRL)
+DISPLACEMENT = ALL                 $ print modal shape
 $
 $
 ECHO         = BOTH
@@ -38,30 +38,49 @@ $
 $ Create XDB output file
 $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
 PARAM   POST    0
-$
+
 $ Definition of geometric grid Point
 $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
 $GRID     ID              X1      X2      X3
-GRID
-$
+GRID     1001              0.      0.      0.   $ the fixed one at the bottom 
+GRID     1002              0.      0.      0.   $ the big box (M1)
+GRID     1003              0.      0.      0.   $ the smaller box (M2)
+
+
 $ Definition of concentrated mass at a grid point
 $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
 $CONM2    EID      G      CID      M       X1      X2     X3
 $         I11     I21     I22     I31     I32     I33
-CONM2
-$
+CONM2     1011    1002   -1       1.0     0.      0.     0.  
+          0.      0.      0.      0.      0.      0.
+CONM2     1012    1003   -1       1.0     0.      0.     0.  
+          0.      0.      0.      0.      0.      0.           
+
 $ Definition of scalar spring element
 $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
-$CELAS2   EID     K       G1      C1       G2      C2
-CELAS2
+$CELAS2   EID     K       G1      C1      G2      C2
+CELAS2    1111   3947.84  1001    3       1002    3    $ connecting floor to M1
+CELAS2    1112  15791.36  1001    3       1003    3    $ connecting floor to M2
+
+$ COUPLING STIFFNESSES: [0, .5, 1, 1.5, 2.5, 5, 50, 1000] * (CELAS2 1111)   $ connecting both masses
+$CELAS2    1113  0.000000  1002    3       1003    3
+CELAS2    1113  3947.840  1002    3       1003    3
+$CELAS2    1113  5921.760  1002    3       1003    3
+$CELAS2    1113  9869.600  1002    3       1003    3
+$CELAS2    1113  19739.20  1002    3       1003    3
+$CELAS2    1113  197392.0  1002    3       1003    3
+$CELAS2    1113  3947840.  1002    3       1003    3
+
 $ Definition of a set of single-point constrains
 $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
 $SPC     SID      G1      C1
-SPC
-$
+SPC      1000     1001   123456     $ fixed point at the floor
+SPC      1000     1002   12456      $ M1 moves freely in Z-direction
+SPC      1000     1003   12456      $ same goes for M2
+
 $ Definition of Lanczos method to obtain eigenvalues
 $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
 $EIGRL    SID                     ND                             NORM
-EIGRL
-$
+EIGRL    2000                      2                              MAX
+
 ENDDATA
