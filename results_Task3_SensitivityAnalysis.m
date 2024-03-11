@@ -1,4 +1,11 @@
-%% TASK 3: EVOLUTION OF NATURAL FREQUENCIES WITH kCOUPLING:
+%% TASK 3: SENSITIVITY ANALYSIS TO dt of 1-cos LOAD
+
+dti = [0.01; 0.05; 0.09; 0.1; 0.11; 0.2; 0.3; 1.0]';
+Fi = 1./dti
+disp(Fi)
+
+%%
+
 k1 = 3947.84;
 a = [0, .5, 1, 1.5, 2.5, 5, 50, 1000]';
 k = a*k1;
