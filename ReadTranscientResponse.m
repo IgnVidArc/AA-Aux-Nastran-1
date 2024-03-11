@@ -1,5 +1,7 @@
 function [TIMES, STATES] = ReadTranscientResponse(filename, StartLine, NtimeSteps)
-
+    % Returns:
+    % TIMES:  array (NtimeSteps+1,1)
+    % STATES: array (NtimeSteps+1,6)
     fid = fopen(filename, 'r');
 
     TIMES = zeros(NtimeSteps,1);
@@ -10,7 +12,7 @@ function [TIMES, STATES] = ReadTranscientResponse(filename, StartLine, NtimeStep
         fgetl(fid);
     end
     
-    for k=1:NtimeSteps+1+1
+    for k=1:NtimeSteps+1
         disp(k)
         % Normal line:
         data_cell = textscan(fid, '%s', 6);
