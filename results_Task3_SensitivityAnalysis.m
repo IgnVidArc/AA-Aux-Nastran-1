@@ -1,5 +1,5 @@
 %% TASK 3: SENSITIVITY ANALYSIS TO dt of 1-cos LOAD
-
+% and comparison to task2 (free masses with no coupling)
 dti = [0.01; 0.05; 0.09; 0.1; 0.11; 0.2; 0.3; 1.0]';
 Fi = 1./dti;
 disp(Fi)
@@ -71,16 +71,16 @@ for k=1:Ncases
 end
 
 %% FIG (MAYBE JUST FOR US): Load on mass M1:
-figure
-hold on
-for k=1:Ncases
-    plot(TIMES(k,:), LOADS(k,:))
-end
-legend(leg_dti, Interpreter='latex')
-xlim([0,1])
+% figure
+% hold on
+% for k=1:Ncases
+%     plot(TIMES(k,:), LOADS(k,:))
+% end
+% legend(leg_dti, Interpreter='latex')
+% xlim([0,1])
 
 %% FIGS: Temporal responses of each mass:
-fs = 12;
+fs = 14;
 
 figure
 hold on
@@ -114,7 +114,7 @@ ylabel('Displacement (mm)', Interpreter='latex', FontSize=fs)
 
 
 %% FIG: (Maximum displacements) vs (dt)
-fs = 12;
+fs = 14;
 lw = 1.25;
 figure
 plot(dti, 1000*maxZ0, '-s', LineWidth=lw)
@@ -122,11 +122,8 @@ hold on
 plot(dti, 1000*maxZ1, '-s', LineWidth=lw)
 plot(dti, 1000*maxZ2, '-s', LineWidth=lw)
 
-legend({'$M_0$ (Free)', '$M_1$', '$M_2$'}, Interpreter='latex', FontSize=fs)
+legend({'$M_1$ (Free)', '$M_1$', '$M_2$'}, Interpreter='latex', FontSize=fs)
 xlabel('dt (s)', Interpreter='latex', FontSize=fs)
 ylabel('Maximum displacement (mm)', Interpreter='latex', FontSize=fs)
 set(gca, 'Xscale', 'log')
 grid on
-
-
-
