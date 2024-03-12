@@ -1,7 +1,8 @@
 function [TIMES, STATES] = ReadTranscientResponse(filename, StartLine, NtimeSteps)
     % Returns:
     % TIMES:  array (NtimeSteps+1,1)
-    % STATES: array (NtimeSteps+1,6)
+    % STATES: array (NtimeSteps+1,6), components of the
+    % disp/velocity/acceleration/load to read.
     fid = fopen(filename, 'r');
 
     TIMES = zeros(NtimeSteps,1);

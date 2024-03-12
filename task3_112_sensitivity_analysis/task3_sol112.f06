@@ -1,0 +1,380 @@
+1
+ 
+ 
+ 
+ 
+                      Warning: This computer program is protected by copyright law and international treaties.       
+                  Unauthorized use, reproduction or distribution of this computer program, or any portion of it, may 
+                                          result in severe civil and criminal penalties.                             
+                         Copyright (C) 2023 Hexagon AB and/or its subsidiaries. All rights reserved.                 
+ 
+ 
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * *                                 * *
+                                              * *           Hexagon AB            * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *      M S C   N a s t r a n      * *
+                                              * *                                 * *
+                                              * *  S T U D E N T   E D I T I O N  * *
+                                              * *                                 * *
+                                              * *     Version 2023.1-CL914096     * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *          MAR 30, 2023           * *
+                                              * *                                 * *
+                                              * *              Intel              * *
+                                              * *MODEL 11th Gen Intel(R) Core(TM) * *
+                                              * *    Windows 10 Home 6.2 9200     * *
+                                              * * Compiled for 8664 (SINGLE Mode) * *
+                                              * *                                 * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+
+ 
+ 
+                                                 This Student Edition version is  
+                                                    valid until MAR 15, 2025.     
+ 
+ 
+                  This program is being distributed as part of the Hexagon AB Student Edition. Use of this program   
+                     or its results at a commercial installation, for commercial purposes, or for production work    
+                                             I S   S T R I C T L Y  P R O H I B I T E D.                             
+                  ==================================== FOR EDUCATIONAL USE ONLY =====================================
+ 
+ 
+1News file - (February 21st, 2023)
+  
+               Welcome to MSC Nastran 2023.1
+  
+   MSC Nastran brings powerful new features and enhancements for engineering
+   solutions in several releases through the year. Key enhancements in
+   Version 2023.1 are summarized below. Addtional details can be found in
+   the MSC Nastran Version 2023.1 Release Guide.
+  
+     MSC Nastran 2023.1 Features and Enhancements
+  
+     HPC
+     - Reduced memory requirements for ACMS when large numbers of RBE3 elements
+       are present in the model
+     - Support for AMD AOCL libraries
+  
+     Documentation
+     - The complete documentation set is provided in a separate installer and
+       when installed is available at: MSC_DOC_DIR/doc/pdf_nastran directory,
+       where MSC_DOC_DIR is the directory where documentation was installed.
+       This help set includes cross references between documents, and links to
+       how-to videos, and example files
+  
+     Individual MSC Nastran documents are available for download from the
+       Simcompanion Website at:
+       http://simcompanion.hexagon.com/
+  
+     These documents were updated for the MSC Nastran 2023.1 Release
+  
+         1.  MSC Nastran 2023.1 Installation and Operations Guide
+         2.  MSC Nastran 2023.1 Quick Reference Guide
+         3.  MSC Nastran 2023.1 Release Guide
+         4.  MSC Nastran 2023.1 Linear Statics Analysis User's Guide
+         5.  MSC Nastran 2023.1 Dynamic Analysis User's Guide
+         6.  MSC Nastran 2023.1 Superelements User's Guide
+         7.  MSC Nastran 2023.1 Rotordynamics User's Guide
+         8.  MSC Nastran 2023.1 Demonstration Problems Manual
+         9.  MSC Nastran 2023.1 Nastran Embedded Fatigue User's Guide
+        10.  MSC Nastran 2023.1 Design Sensitivity and Optimization
+        11.  MSC Nastran 2023.1 Nonlinear User's Guide SOL 400
+        12.  MSC Nastran 2023.1 DMAP Programmer's Guide
+        13.  MSC Nastran 2023.1 High Performance Computing User's Guide
+        14.  MSC Nastran 2023.1 New Verification Manual
+        15.  MSC Nastran 2023.1 DEMATD Guide
+        16.  MSC Nastran 2023.1 Explicit Nonlinear (SOL 700) User's Guide
+        17.  MSC Nastran 2023.1 ACMS User's Guide
+  
+   Please refer to  MSC_DOC_DIR/doc/pdf_nastran/nastran_library.pdf
+   for the complete document set:
+  
+1 
+   Additional information about the release can be found at the MSC Nastran
+   Product Support page: http://simcompanion.hexagon.com
+  
+   The support page provides links to these valuable information:
+      * A searchable Knowledge Base containing examples and answers to thousands
+        of frequently asked questions written by MSC Software subject-matter
+        experts.
+      * Peer-to-peer Discussion Forums enabling you to post questions for your
+        MSC Software products and receive answers from other users worldwide.
+      * A list of known issues with the product and any workarounds.
+      * Instructions on how to contact technical support
+      * A mechanism for sending us product feedback or enhancement requests.
+      * Hardware and software requirements.
+      * Examples and Tutorials
+      * and much more.
+  
+   For information on training, please visit our Training web site
+  
+      https://www.mscsoftware.com/msc-training
+  
+1                                                       **STUDENT EDITION*    MARCH  12, 2024  MSC Nastran  3/30/23   PAGE     1
+                                                                                                                                    
+0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     NASTRAN BUFFSIZE=8193 $(C:/PROGRAM FILES/MSC.SOFTWARE/NAPA_SE/20231/NASTRAN/CONF
+     $===============================================================================
+     $                                                                               
+     $  SOL 112 - MODAL TRANSIENT RESPONSE ANALYSIS   .                              
+     $  DETEMINATION OF THE TIME HISTOY RESPONSE WITH THE SOL 112                    
+     $                                                                               
+     $                                                                               
+     $===============================================================================
+     $                                                                               
+     $ ----------------------------- EXECUTIVE CONTROL DECK ------------------------ 
+     $                                                                               
+1                                                       **STUDENT EDITION*    MARCH  12, 2024  MSC Nastran  3/30/23   PAGE     2
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     SOL 112                        $ MODAL TRANSIENT RESPONSE ANALYSIS                      
+     TIME 5                         $ EIGENVALUES REQUIRE LARGER TIME LIMITS                 
+     CEND                                                                                    
+1    RESOLUTION OF TASK_2                               **STUDENT EDITION*    MARCH  12, 2024  MSC Nastran  3/30/23   PAGE     3
+      MODAL TRANSIENT RESPONSE                                                                                                      
+0     ONE-DOF SPRING/MASS SYSTEM INCLUDIG STRUCTURAL ANALISYS                                                                       
+0                                        C A S E    C O N T R O L    E C H O                                                        
+                 COMMAND                                                                                                            
+                 COUNT                                                                                                              
+                  1      $                                                                                       
+                  2      $ ----------------------------- CASE CONTROL DECK ----------------------        ------  
+                  3      $                                                                                       
+                  4      TITLE        = RESOLUTION OF TASK_2                                                     
+                  5      SUBTITLE     = MODAL TRANSIENT RESPONSE                                                 
+                  6      LABEL        = ONE-DOF SPRING/MASS SYSTEM INCLUDIG STRUCTURAL ANALISYS                  
+                  7      $                                                                                       
+                  8      SPC          = 1000                $ CALL SINGLE-POINT CONSTRAINT (SPC)                 
+                  9      METHOD       = 2000                $ CALL EIGENVALUE EXTRACTION METHOD I        N ORDER 
+                 10      DLOAD        = 3000                $ CALL DYNAMIC LOAD CASE                             
+                 11      SDAMPING     = 4000                $ CALL DAMPING CASE                                  
+                 12      TSTEP        = 5000                $ CALL TSTEP CARD (TIME EVOLUTION)                   
+                 13      DISPLACEMENT(SORT2,PUNCH) = ALL                $ PRINT DISPLACEMENT AMPL        ITUDE IN
+                 14      ACCELERATION(SORT2,PUNCH) = ALL                $ PRINT ACCELERATION AMPL        ITUDE IN
+                 15      OLOAD(SORT2,PUNCH)        = ALL                $ PRINT APPLICATED LOAD                  
+                 16      $                                                                                       
+                 17      $                                                                                       
+                 18      ECHO         = BOTH                                                                     
+                 19      AUTOSPC      = NO                                                                       
+                 20      RESVEC       = NO              $ OPTION FOR CALCULATION OF RESIDUAL VECT        ORS.    
+                 21      $                                                                                       
+                 22      $ ----------------------------- BULK DATA DECK -------------------------        ------  
+                 23      $                                                                                       
+                 24      BEGIN BULK                                                                              
+1    RESOLUTION OF TASK_2                               **STUDENT EDITION*    MARCH  12, 2024  MSC Nastran  3/30/23   PAGE     4
+      MODAL TRANSIENT RESPONSE                                                                                                      
+0     ONE-DOF SPRING/MASS SYSTEM INCLUDIG STRUCTURAL ANALISYS                                                                       
+                                              I N P U T   B U L K   D A T A   E C H O                                               
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                   38-        $
+                   39-        $ Print mass properties table
+                   40-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                   41-        PARAM   GRDPNT  0
+                   42-        $
+                   43-        $ Create XDB output file
+                   44-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                   45-        PARAM   POST    0
+                   47-        $ Definition of geometric grid Point
+                   48-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                   49-        $GRID     ID              X1      X2      X3
+                   50-        GRID     1001              0.      0.      0.
+                   51-        GRID     1002              0.      0.      0.
+                   52-        GRID     1003              0.      0.      0.
+                   54-        $ Definition of concentrated mass at a grid point
+                   55-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                   56-        $CONM2    EID      G      CID      M       X1      X2     X3
+                   57-        $         I11     I21     I22     I31     I32     I33
+                   58-        CONM2     1011    1002   -1       1.0     0.      0.     0.
+                   59-        +         0.      0.      0.      0.      0.      0.
+                   60-        CONM2     1012    1003   -1       1.0     0.      0.     0.
+                   61-        +         0.      0.      0.      0.      0.     0.
+                   63-        $ Definition of scalar spring element
+                   64-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                   65-        $CELAS2   EID     K       G1      C1       G2      C2
+                   66-        CELAS2    1111   3947.84  1001    3       1002    3
+                   67-        CELAS2    1112  15791.36  1001    3       1003    3
+                   68-        $ Copuling stiffness: (k_coupling = 1.0 * k1)
+                   69-        CELAS2    1113  3947.840  1002    3       1003    3
+                   71-        $ Definition of a set of single-point constrains
+                   72-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                   73-        $SPC     SID      G1      C1
+                   74-        SPC      1000     1001   123456
+                   75-        SPC      1000     1002   12456
+                   76-        SPC      1000     1003   12456
+                   78-        $ Definition of Lanczos method to obtain eigenvalues
+                   79-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                   80-        $EIGRL    SID                     ND                             NORM
+                   81-        EIGRL    2000                      2                              MAX
+                   83-        $ Definition of Dynamic Load Case
+                   84-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                   85-        $DLOAD    SID     S       S1      L1      S2      L2      S3      L3
+                   86-        DLOAD    3000     0.5     1.      3100   -1.      3200
+                   88-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                   89-        $TLOAD2  SID  EXCITEID  DELAY    TYPE     T1      T2      F       P
+1    RESOLUTION OF TASK_2                               **STUDENT EDITION*    MARCH  12, 2024  MSC Nastran  3/30/23   PAGE     5
+      MODAL TRANSIENT RESPONSE                                                                                                      
+0     ONE-DOF SPRING/MASS SYSTEM INCLUDIG STRUCTURAL ANALISYS                                                                       
+                                              I N P U T   B U L K   D A T A   E C H O                                               
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                   90-        $         C       B      US0     VS0
+                   91-        TLOAD2   3100   3150       0.    LOAD     0.     0.01   0.      0.
+                   92-        +         0.       0.      0.      0.
+                   93-        TLOAD2   3200   3150       0.    LOAD     0.     0.01   100.00     0.
+                   94-        $TLOAD2   3200   3150       0.    LOAD     0.     0.05   20.000     0.
+                   95-        $TLOAD2   3200   3150       0.    LOAD     0.     0.09   11.111    0.
+                   96-        $TLOAD2   3200   3150       0.    LOAD     0.     0.10   10.000     0.
+                   97-        $TLOAD2   3200   3150       0.    LOAD     0.     0.11   9.0909     0.
+                   98-        $TLOAD2   3200   3150       0.    LOAD     0.     0.20   5.0000     0.
+                   99-        $TLOAD2   3200   3150       0.    LOAD     0.     0.30   3.3333     0.
+                  100-        $TLOAD2   3200   3150       0.    LOAD     0.     1.00   1.0000     0.
+                  101-        +         0.       0.      0.      0.
+                  103-        $ VALUES FOR THE <T2> in the "TOLAD 3200":
+                  104-        $ 0.01, 0.05, 0.09, 0.1, 0.11, 0.2, 0.3, 1.0
+                  105-        $ VALUES FOR the <F> in the "TLOAD2 3200": (F = 1/delta_t)
+                  106-        $ 100.0000   20.0000   11.1111   10.0000    9.0909    5.0000    3.3333    1.0000
+                  109-        $DAREA    SID    P1       C1      A1     P2       C2      A2
+                  110-        DAREA    3150    1002      3      1.
+                  111-        $
+                  112-        $
+                  113-        $ Definition of structural damping
+                  114-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                  115-        $TABDMP1  TID     TYPE
+                  116-        $         f1       g1     f2      g2      f3      g3       etc    ENDT
+                  117-        TABDMP1   4000    G
+                  118-        +         0.      0.03     10.   0.03      50.   0.03    100.     0.03
+                  119-        +         ENDT
+                  121-        $ Definition of excitation frequency
+                  122-        $--1--->---2--->---3--->---4--->---5--->---6--->---7--->---8--->---9--->---10-->
+                  123-        $TSTEP    SID     N1      DT      NO1
+                  124-        TSTEP    5000    1001    0.001    1
+                  125-        $
+1    RESOLUTION OF TASK_2                               **STUDENT EDITION*    MARCH  12, 2024  MSC Nastran  3/30/23   PAGE     6
+      MODAL TRANSIENT RESPONSE                                                                                                      
+0     ONE-DOF SPRING/MASS SYSTEM INCLUDIG STRUCTURAL ANALISYS                                                                       
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                    1-        CELAS2  1111    3947.84 1001    3       1002    3
+                    2-        CELAS2  1112    15791.361001    3       1003    3
+                    3-        CELAS2  1113    3947.84 1002    3       1003    3
+                    4-        CONM2   1011    1002    -1      1.      0.      0.      0.              +
+                    5-        +       0.      0.      0.      0.      0.      0.
+                    6-        CONM2   1012    1003    -1      1.      0.      0.      0.              +
+                    7-        +       0.      0.      0.      0.      0.      0.
+                    8-        DAREA   3150    1002    3       1.
+                    9-        DLOAD   3000    .5      1.      3100    -1.     3200
+                   10-        EIGRL   2000                    2                               MAX
+                   11-        GRID    1001            0.      0.      0.
+                   12-        GRID    1002            0.      0.      0.
+                   13-        GRID    1003            0.      0.      0.
+                   14-        PARAM   GRDPNT  0
+                   15-        PARAM   POST    0
+                   16-        SPC     1000    1001    123456
+                   17-        SPC     1000    1002    12456
+                   18-        SPC     1000    1003    12456
+                   19-        TABDMP1 4000    G                                                       +
+                   20-        +       0.      .03     10.     .03     50.     .03     100.    .03     +
+                   21-        +       ENDT
+                   22-        TLOAD2  3100    3150    0.      LOAD    0.      .01     0.      0.      +
+                   23-        +       0.      0.      0.      0.
+                   24-        TLOAD2  3200    3150    0.      LOAD    0.      .01     100.    0.      +
+                   25-        +       0.      0.      0.      0.
+                   26-        TSTEP   5000    1001    .001    1
+                              ENDDATA
+                        TOTAL COUNT= 27
+                              INPUT BULK DATA ENTRY COUNT = 32
+1    RESOLUTION OF TASK_2                               **STUDENT EDITION*    MARCH  12, 2024  MSC Nastran  3/30/23   PAGE     7
+      MODAL TRANSIENT RESPONSE                                                                                                      
+0     ONE-DOF SPRING/MASS SYSTEM INCLUDIG STRUCTURAL ANALISYS                                                                       
+                                        M O D E L   S U M M A R Y          BULK = 0
+                                   ENTRY NAME        NUMBER OF ENTRIES
+                                   ----------        -----------------
+                                       CELAS2                        3
+                                        CONM2                        2
+                                        DAREA                        1
+                                        DLOAD                        1
+                                        EIGRL                        1
+                                         GRID                        3
+                                        PARAM                        2
+                                          SPC                        3
+                                      TABDMP1                        1
+                                       TLOAD2                        2
+                                        TSTEP                        1
+
+ ^^^     
+ ^^^ >>> IFP OPERATIONS COMPLETE <<< 
+ ^^^     
+ *** USER INFORMATION MESSAGE 7553 (GP1D)
+     A TOTAL OF 1 DAREA BULK DATA ENTRIES FOR GRID AND SCALAR POINTS HAVE BEEN CONVERTED TO EQUIVALENT
+     FORCE / MOMENT / SLOAD ENTRIES (AS APPROPRIATE)
+ MAIN: "Access violation" (C0000005) exception encountered.
+ MAIN: For reference, A(MAINAL)   =     7FF621E310A0, A(/SYSTEM/) =     7FF628C3DBA0   
+ MAIN:               A(Open Core) =      2ACE531F040                                   
+ MAIN: Exception occurred at address 00007FF626F8EB6E.
+ MAIN: Program attempted to store data at location FFFFFFFF00000010.
+ MAIN: Context Flags 0010005F
+ MAIN: The general registers, instruction pointer, and flags are --
+ MAIN: RAX 0000000000000000  RSP 000000F006DFD320  R8  000000F006DFD5A0  R12 00000000FFFFFFFF
+ MAIN: RCX 000002ACECDE5750  RBP FFFFFFFF00000000  R9  0000000000000001  R13 000002ACECDE5750
+ MAIN: RDX 0000000000000004  RSI 0000000000000000  R10 0000000000000330  R14 000002ACF5735890
+ MAIN: RBX 000002ACF5735890  RDI 000000F006DFD5A0  R11 0000000000000014  R15 0000000000001000
+ MAIN: RIP 00007FF626F8EB6E  EFLAGS 00010286  MXCSR E59F 0000
+ MAIN: The 32 bytes around exception location 00007FF626F8EB6E are --
+ MAIN: 00007FF626F8EB5E   BC FF FF FF   FF 48 85 ED   0F 84 93 00   00 00 8B 07
+ MAIN: 00007FF626F8EB6E   89 45 10 8B   47 04 89 45   14 F7 43 10   00 00 02 00
+ MAIN: The Streaming SIMD Extensions Registers are --
+ MAIN: XMM0   0000000000000000 0000000000000000   XMM8  0000000000000000 0000000000000000
+ MAIN: XMM1   0000000000000001 0000000000000000   XMM9  0000000000000000 0000000000000000
+ MAIN: XMM2   0000000000000001 0000000000000000   XMM10 41F0000000000000 0000000000000000
+ MAIN: XMM3   0000000000000000 0000000000000000   XMM11 0000000000000000 0000000000000000
+ MAIN: XMM4   0000000000000000 0000000000000000   XMM12 0000000000000000 0000000000000000
+ MAIN: XMM5   0000000000000000 0000000000000000   XMM13 0000000000000000 0000000000000000
+ MAIN: XMM6   41F0000000000000 0000000000000000   XMM14 0000000000000000 0000000000000000
+ MAIN: XMM7   0000000000000000 0000000000000000   XMM15 0000000000000000 0000000000000000
+ MAIN: The 256 words on the stack, starting at 000000F006DFD320, are --
+ MAIN: 000000F006DFD320    DB006264 000002AC 00000000 00000000  DB31A850 000002AC DB31A838 000002AC  *db..............P.1.....8.1.....*
+ MAIN: 000000F006DFD340    00000001 00000000 DB3349D0 00000024  00000104 00007FF6 00000208 00000000  *.........I3.$...................*
+ MAIN: 000000F006DFD360    00000000 00000000 91E1E802 00007FF8  00000001 00000000 00000004 00000000  *................................*
+ MAIN: 000000F006DFD380    00000330 00000000 00000001 00000000  06DFD778 000000F0 00000200 00000000  *0...............x...............*
+ MAIN: 000000F006DFD3A0    ECDE5750 000002AC 26F8C2DD 00007FF6  365A2D00 00007FF6 29AAFC68 00007FF6  *PW.........&.....-Z6....h..)....*
+ MAIN: 000000F006DFD3C0    29AAFC70 00007FF6 21F8F91E 00007FF6  00000000 00000000 00000000 00000000  *p..).......!....................*
+ MAIN: 000000F006DFD3E0    E531F060 000002AC 21F70000 00007FF6  365A2C98 00007FF6 29AAFC78 00007FF6  *`.1........!.....,Z6....x..)....*
+ MAIN: 000000F006DFD400    29AAFC60 00007FF6 29AAFBC8 00007FF6  00000001 00000000 21FCE0CD 00007FF6  *`..).......)...............!....*
+ MAIN: 000000F006DFD420    00000000 00000000 0208010A 00007FF6  00000001 00000000 21FCE0CD 00007FF6  *...........................!....*
+ MAIN: 000000F006DFD440    29AAFC68 00007FF6 29AAFD70 00007FF6  365A2D00 00007FF6 29AAFC68 00007FF6  *h..)....p..).....-Z6....h..)....*
+ MAIN: 000000F006DFD460    29AAFC70 00007FF6 29AAFD70 00007FF6  365A2D00 00007FF6 29AAFC68 00007FF6  *p..)....p..).....-Z6....h..)....*
+ MAIN: 000000F006DFD480    29AAFC70 00007FF6 21F8F91E 00007FF6  365A2C98 00007FF6 29AAFC78 00007FF6  *p..).......!.....,Z6....x..)....*
+ MAIN: 000000F006DFD4A0    00000001 00000000 21FCE0CD 00007FF6  365A2C98 00007FF6 29AAFC78 00007FF6  *...........!.....,Z6....x..)....*
+ MAIN: 000000F006DFD4C0    29AAFC60 00007FF6 29AAFBC8 00007FF6  365A2C68 00007FF6 29AAFD70 00007FF6  *`..).......)....h,Z6....p..)....*
+ MAIN: 000000F006DFD4E0    9BE89F4A 0000DF29 29AAFC68 00007FF6  F5735890 000002AC F5735890 000002AC  *J...)...h..).....Xs......Xs.....*
+ MAIN: 000000F006DFD500    00001000 00000000 00000001 00000000  00000200 00000000 ECDE5750 000002AC  *........................PW......*
+ MAIN: 000000F006DFD520    06DFD630 000000F0 26F8AA97 00007FF6  29AAFC60 00007FF6 29AAFBC8 00007FF6  *0..........&....`..).......)....*
+ MAIN: 000000F006DFD540    365A2C68 00007FF6 00000004 00000000  ECDE5750 000002AC 00001000 00007FF6  *h,Z6............PW..............*
+ MAIN: 000000F006DFD560    29AAFD00 00007FF6 21F8F91E 00007FF6  29AAFC68 00007FF6 21FCF5C2 00007FF6  *...).......!....h..).......!....*
+ MAIN: 000000F006DFD580    F5735890 000002AC 35EC2000 00007FF6  00000001 00000000 00000001 00000000  *.Xs...... .5....................*
+ MAIN: 000000F006DFD5A0    00000000 00000000 ECDE5750 000002AC  365A2C68 00007FF6 00000004 00000000  *........PW......h,Z6............*
+ MAIN: 000000F006DFD5C0    00000028 00000000 00000000 00000000  00001000 00000000 00000330 00000000  *(.......................0.......*
+ MAIN: 000000F006DFD5E0    35D649A8 00007FF6 00001000 00007FF6  00000000 00000000 35EC1FF0 00007FF6  *.I.5.......................5....*
+ MAIN: 000000F006DFD600    00000000 00000000 35EC2010 00007FF6  29AB9CF0 00007FF6 29AAC8A0 00007FF6  *......... .5.......).......)....*
+ MAIN: 000000F006DFD620    365A2C68 00007FF6 21F03C56 00007FF6  29AAFC68 00007FF6 00000000 00000000  *h,Z6....V<.!....h..)............*
+ MAIN: 000000F006DFD640    45504F51 20202020 29AAFC68 00007FF6  29AAFC78 00007FF6 F39940D0 000002AC  *QOPE    h..)....x..).....@......*
+ MAIN: 000000F006DFD660    00000001 00000000 27C3B288 00007FF6  01DDB163 00000000 21F012FD 00007FF6  *...........'....c..........!....*
+ MAIN: 000000F006DFD680    E531F040 000002AC 00000001 00000000  01CCE9F4 00000000 21F8F91E 00007FF6  *@.1........................!....*
+ MAIN: 000000F006DFD6A0    29AAFC68 00007FF6 29AAFC70 00007FF6  29AAFC78 00007FF6 00000000 00000000  *h..)....p..)....x..)............*
+ MAIN: 000000F006DFD6C0    01CCE9F4 00000000 29AB9CF8 00007FF6  29AAFD08 00007FF6 29AB9CF0 00007FF6  *...........).......).......)....*
+ MAIN: 000000F006DFD6E0    00000001 00000000 00000001 00000000  E531F040 000002AC 00000001 00000000  *................@.1.............*
+ MAIN: 000000F006DFD700    01CCEA12 00000000 29AAFC68 00007FF6  00000001 00000000 00000001 00000000  *........h..)....................*
+ MAIN: The stack data starting at FFFFFFFF00000000 is not accessible.
