@@ -1,4 +1,4 @@
-# APARTADO 4: `results_Task3_Coupling`
+# APARTADO 4: `results_Task3_Coupling.m`
 ## Fig100: Modal frequencies vs dt of the 1-cosine excitation.
 Analysis hecho en `PRIMERAS_NOTAS_SOBRE_RESULTADOS.md`
 
