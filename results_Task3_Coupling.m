@@ -15,11 +15,14 @@ freqs = [
 ];
 
 figure(1)
+fs = 12;
 loglog(a, freqs(:,:), '-s')
 % set(gca, 'YScale', 'log')
 % set(gca, 'XScale', 'log')
 xlim([.5,1000])
-legend({'f1', 'f2'})
+legend({'$f_1$', '$f_2$'}, Interpreter="latex", FontSize=fs)
+xlabel('$k_{coupling}/k_1$', Interpreter='latex', FontSize=fs)
+ylabel('Modal Frequency (Hz)', Interpreter='latex', FontSize=fs)
 
 
 %% Analytical f1
