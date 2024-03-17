@@ -207,11 +207,11 @@
                                    ----------        -----------------
                                          CBAR                       62
                                        CELAS2                       91
-                                        CONM2                       66
+                                        CONM2                       78
                                        CORD2R                        3
                                         EIGRL                        1
                                          GRID                       94
-                                         MAT1                        2
+                                         MAT1                        1
                                         PARAM                        3
                                          PBAR                       52
                                          RBAR                       20
@@ -244,9 +244,9 @@
                     102               514               256                 0                 0                 0                 0
      NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS GEOM2   
         (MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       65538 WORDS.)
-     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =         995 WORDS.)
+     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =        1017 WORDS.)
            (NUMBER OF FORTRAN RECORDS WRITTEN =          30 RECORDS.)
-           (TOTAL DATA WRITTEN FOR DATA BLOCK =        2626 WORDS.)
+           (TOTAL DATA WRITTEN FOR DATA BLOCK =        2782 WORDS.)
 1    GTAV2 / SYMMETRIC/ANTISYMMETRIC A/C                                      MARCH  17, 2024  MSC Nastran 12/18/18   PAGE     5
       MODAL ANALYSIS                                                                                                                
 0                                                                                                                                   
@@ -274,9 +274,9 @@
                     101             32768                 0                 0                 0                 0                 0
      NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS MPT     
         (MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       65538 WORDS.)
-     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =          27 WORDS.)
+     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =          15 WORDS.)
            (NUMBER OF FORTRAN RECORDS WRITTEN =          20 RECORDS.)
-           (TOTAL DATA WRITTEN FOR DATA BLOCK =          58 WORDS.)
+           (TOTAL DATA WRITTEN FOR DATA BLOCK =          46 WORDS.)
  *** USER INFORMATION MESSAGE 4114 (OUTPX2)
      DATA BLOCK DYNAMICS WRITTEN ON FORTRAN UNIT  12 IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR DYNAMICS, TRL =
                     103               256                 0                 0                 0                 0                 0
@@ -291,33 +291,33 @@
                            O U T P U T   F R O M   G R I D   P O I N T   W E I G H T   G E N E R A T O R
 0                                                     REFERENCE POINT =        0
                                                                 M O
-                      *  3.866870E+03  0.000000E+00  0.000000E+00  0.000000E+00  3.344870E+06 -3.614885E+06 *
-                      *  0.000000E+00  3.866870E+03  0.000000E+00 -3.344870E+06  0.000000E+00  2.881096E+07 *
-                      *  0.000000E+00  0.000000E+00  3.866870E+03  3.614885E+06 -2.881096E+07  0.000000E+00 *
-                      *  0.000000E+00 -3.344870E+06  3.614885E+06  3.345316E+10 -3.772383E+10 -6.074971E+10 *
-                      *  3.344870E+06  0.000000E+00 -2.881096E+07 -3.772383E+10  4.035971E+11 -6.980385E+09 *
-                      * -3.614885E+06  2.881096E+07  0.000000E+00 -6.074971E+10 -6.980385E+09  4.045488E+11 *
+                      *  3.828870E+03  0.000000E+00  0.000000E+00  0.000000E+00  3.366370E+06 -3.614885E+06 *
+                      *  0.000000E+00  3.828870E+03  0.000000E+00 -3.366370E+06  0.000000E+00  2.865096E+07 *
+                      *  0.000000E+00  0.000000E+00  3.828870E+03  3.614885E+06 -2.865096E+07  0.000000E+00 *
+                      *  0.000000E+00 -3.366370E+06  3.614885E+06  3.343766E+10 -3.772383E+10 -6.081971E+10 *
+                      *  3.366370E+06  0.000000E+00 -2.865096E+07 -3.772383E+10  4.027816E+11 -6.980385E+09 *
+                      * -3.614885E+06  2.865096E+07  0.000000E+00 -6.081971E+10 -6.980385E+09  4.037488E+11 *
                                                                  S
                                            *  1.000000E+00  0.000000E+00  0.000000E+00 *
                                            *  0.000000E+00  1.000000E+00  0.000000E+00 *
                                            *  0.000000E+00  0.000000E+00  1.000000E+00 *
                                DIRECTION
                           MASS AXIS SYSTEM (S)     MASS              X-C.G.        Y-C.G.        Z-C.G.
-                                  X            3.866870E+03      0.000000E+00  9.348349E+02  8.650071E+02
-                                  Y            3.866870E+03      7.450719E+03  0.000000E+00  8.650071E+02
-                                  Z            3.866870E+03      7.450719E+03  9.348349E+02  0.000000E+00
+                                  X            3.828870E+03      0.000000E+00  9.441128E+02  8.792072E+02
+                                  Y            3.828870E+03      7.482876E+03  0.000000E+00  8.792072E+02
+                                  Z            3.828870E+03      7.482876E+03  9.441128E+02  0.000000E+00
                                                                 I(S)
-                                           *  2.718051E+10  1.079034E+10  3.582803E+10 *
-                                           *  1.079034E+10  1.860414E+11  3.853484E+09 *
-                                           *  3.582803E+10  3.853484E+09  1.865071E+11 *
+                                           *  2.706507E+10  1.067409E+10  3.562958E+10 *
+                                           *  1.067409E+10  1.854303E+11  3.802152E+09 *
+                                           *  3.562958E+10  3.802152E+09  1.859444E+11 *
                                                                 I(Q)
-                                           *  1.865189E+11                             *
-                                           *                1.872342E+10               *
-                                           *                              1.944867E+11 *
+                                           *  1.859010E+11                             *
+                                           *                1.868397E+10               *
+                                           *                              1.938548E+11 *
                                                                  Q
-                                           *  1.053691E-01 -9.753873E-01  1.936930E-01 *
-                                           * -9.791417E-01 -6.773547E-02  1.915553E-01 *
-                                           * -1.737208E-01 -2.098369E-01 -9.621796E-01 *
+                                           *  1.043302E-01 -9.755309E-01  1.935322E-01 *
+                                           * -9.796230E-01 -6.722085E-02  1.892619E-01 *
+                                           * -1.716214E-01 -2.093343E-01 -9.626657E-01 *
 
 1    GTAV2 / SYMMETRIC/ANTISYMMETRIC A/C                                      MARCH  17, 2024  MSC Nastran 12/18/18   PAGE     7
       MODAL ANALYSIS                                                                                                                
@@ -339,15 +339,15 @@
              TOTALS  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
  *** USER INFORMATION MESSAGE 5010 (LNCILS)
      STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
-     TRIAL EIGENVALUE = 9.869604D+04, CYCLES = 5.000000D+01 THE STURM COUNT = 15
+     TRIAL EIGENVALUE = 9.869604D+04, CYCLES = 5.000000D+01 THE STURM COUNT = 18
  *** USER INFORMATION MESSAGE 5010 (LNCILS)
      STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
-     TRIAL EIGENVALUE = -4.621601D+03, CYCLES = 1.081973D+01 THE STURM COUNT = 0
+     TRIAL EIGENVALUE = -4.339657D+03, CYCLES = 1.048450D+01 THE STURM COUNT = 0
 
  TABLE OF SHIFTS:  (LNNRIGL)
  SHIFT #        SHIFT VALUE         FREQUENCY, CYCLES     # EIGENVALUES BELOW    # NEW EIGENVALUES FOUND
-     1.        9.8696044E+04          5.0000000E+01                15                        0
-     2.       -4.6216014E+03         -1.0819729E+01                 0                       15
+     1.        9.8696044E+04          5.0000000E+01                18                        0
+     2.       -4.3396567E+03         -1.0484502E+01                 0                       18
 
 1    GTAV2 / SYMMETRIC/ANTISYMMETRIC A/C                                      MARCH  17, 2024  MSC Nastran 12/18/18   PAGE     9
       MODAL ANALYSIS                                                                                                                
@@ -363,9 +363,9 @@
 
                                      NUMBER OF DECOMPOSITIONS .............     2
 
-                                     NUMBER OF ROOTS FOUND ................    15
+                                     NUMBER OF ROOTS FOUND ................    18
 
-                                     NUMBER OF SOLVES REQUIRED ............     8
+                                     NUMBER OF SOLVES REQUIRED ............     9
 
 1    GTAV2 / SYMMETRIC/ANTISYMMETRIC A/C                                      MARCH  17, 2024  MSC Nastran 12/18/18   PAGE    10
       MODAL ANALYSIS                                                                                                                
@@ -374,30 +374,33 @@
                                               R E A L   E I G E N V A L U E S
    MODE    EXTRACTION      EIGENVALUE            RADIANS             CYCLES            GENERALIZED         GENERALIZED
     NO.       ORDER                                                                       MASS              STIFFNESS
-        1         1        8.668134E+02        2.944169E+01        4.685791E+00        8.291458E-02        7.187147E+01
-        2         2        1.405940E+03        3.749586E+01        5.967652E+00        2.144548E-01        3.015105E+02
-        3         3        2.813951E+03        5.304668E+01        8.442642E+00        1.403434E-01        3.949195E+02
-        4         4        4.260029E+03        6.526890E+01        1.038787E+01        1.267516E-01        5.399657E+02
-        5         5        6.624854E+03        8.139320E+01        1.295413E+01        1.006179E-01        6.665787E+02
-        6         6        9.794315E+03        9.896623E+01        1.575097E+01        3.814018E-02        3.735569E+02
-        7         7        1.445797E+04        1.202413E+02        1.913700E+01        2.949291E-02        4.264076E+02
-        8         8        1.625731E+04        1.275041E+02        2.029292E+01        5.533654E-02        8.996232E+02
-        9         9        1.875070E+04        1.369332E+02        2.179359E+01        5.267653E-02        9.877216E+02
-       10        10        2.482443E+04        1.575577E+02        2.507609E+01        1.821491E-01        4.521748E+03
-       11        11        2.519254E+04        1.587216E+02        2.526132E+01        4.117774E-02        1.037372E+03
-       12        12        4.049880E+04        2.012431E+02        3.202884E+01        2.512089E-02        1.017366E+03
-       13        13        6.826902E+04        2.612834E+02        4.158455E+01        7.212007E-01        4.923567E+04
-       14        14        7.969489E+04        2.823028E+02        4.492989E+01        4.474296E-01        3.565785E+04
-       15        15        8.620705E+04        2.936104E+02        4.672954E+01        7.890998E-02        6.802596E+03
+        1         1       -2.282623E-05        4.777681E-03        7.603915E-04        7.082967E-01       -1.616775E-05
+        2         2       -2.606603E-07        5.105490E-04        8.125640E-05        3.694238E+00       -9.629410E-07
+        3         3        3.166096E-05        5.626807E-03        8.955342E-04        2.739785E-01        8.674422E-06
+        4         4        1.319848E+03        3.632971E+01        5.782054E+00        1.633905E-01        2.156506E+02
+        5         5        3.219625E+03        5.674174E+01        9.030728E+00        1.628935E-01        5.244561E+02
+        6         6        4.806118E+03        6.932617E+01        1.103360E+01        1.914694E-01        9.202246E+02
+        7         7        6.651016E+03        8.155376E+01        1.297968E+01        1.042550E-01        6.934014E+02
+        8         8        9.804967E+03        9.902003E+01        1.575953E+01        3.821059E-02        3.746535E+02
+        9         9        1.386131E+04        1.177341E+02        1.873796E+01        1.646700E-01        2.282542E+03
+       10        10        1.527342E+04        1.235857E+02        1.966927E+01        2.182879E-02        3.334003E+02
+       11        11        1.843150E+04        1.357627E+02        2.160730E+01        1.284854E-01        2.368179E+03
+       12        12        2.035902E+04        1.426851E+02        2.270903E+01        5.981887E-02        1.217854E+03
+       13        13        2.121723E+04        1.456614E+02        2.318273E+01        5.902886E-02        1.252429E+03
+       14        14        3.189200E+04        1.785833E+02        2.842242E+01        2.905915E-01        9.267542E+03
+       15        15        5.400054E+04        2.323802E+02        3.698445E+01        5.580980E-02        3.013759E+03
+       16        16        7.006591E+04        2.646997E+02        4.212826E+01        3.409303E-01        2.388759E+04
+       17        17        8.287118E+04        2.878736E+02        4.581650E+01        4.466144E-01        3.701146E+04
+       18        18        9.533608E+04        3.087654E+02        4.914154E+01        9.172478E-02        8.744681E+03
 *** User Information: Select OptionX for OUTPUT2 Datablock OUG1    
  *** USER INFORMATION MESSAGE 4114 (OUTPX2)
      DATA BLOCK OUG1     WRITTEN ON FORTRAN UNIT  12 IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR OUG1, TRL =
-                    101                 0             11280                 0                 0                 0                 2
+                    101                 0             13536                 0                 0                 0                 2
      NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS OUG1    
         (MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       65538 WORDS.)
      (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =         752 WORDS.)
-           (NUMBER OF FORTRAN RECORDS WRITTEN =         160 RECORDS.)
-           (TOTAL DATA WRITTEN FOR DATA BLOCK =       13615 WORDS.)
+           (NUMBER OF FORTRAN RECORDS WRITTEN =         190 RECORDS.)
+           (TOTAL DATA WRITTEN FOR DATA BLOCK =       16333 WORDS.)
  *** USER INFORMATION MESSAGE 4110 (OUTPX2)
                                  END-OF-DATA SIMULATION ON FORTRAN UNIT 12
                                  (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =      1 WORDS.)
