@@ -1022,7 +1022,10 @@ SPC     100     10090   246
 SPC     100     10100   246
 SPC     100     10110   246
 $
-$ Vertical Tail
+$ Wing (point in symmetry plane)
+SPC     100     20000   246
+$
+$ Vertical Tail 
 $
 $SPC    SID     G1      C1
 SPC     100     30000   246

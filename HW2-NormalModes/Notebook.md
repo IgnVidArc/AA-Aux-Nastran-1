@@ -50,7 +50,8 @@ Entiendo que sería cambiándolo en el `PBAR`.
 - He creado el `MAT1 69` con 35000 Pa de rigidez, la mitad que los 70000 de MAT1 10 que se usa en todos los de más lados.
 
 # RESULTADOS
-- el modelo simétrico presenta tres modos como solido rígido y el antisimétrico seis. 
+- el modelo simétrico presenta tres modos como solido rígido y el antisimétrico seis. CORRECCIÓN: Esto era con el modelo incorrecto sin las BC del antisimétrico metidas (1,3,5).
+## Simétrico
 - el modo *15 - fuselage bending*, simétrico, no aparece en la solución simétrica.
 - el modo *26 - 2nd fuselage bending* tiene 28Hz en el completo y casi 35 en el simétrico el modo 13 de esa solución. es el modo que más error presenta.
 - mirando a las frecuencias del antisimétrico, el modo global 8, de 5.78 Hz, lo calcula como de 6.07 Hz.
