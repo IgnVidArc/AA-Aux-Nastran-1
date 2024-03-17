@@ -51,11 +51,8 @@ Entiendo que sería cambiándolo en el `PBAR`.
 
 # RESULTADOS
 - el modelo simétrico presenta tres modos como solido rígido y el antisimétrico seis. CORRECCIÓN: Esto era con el modelo incorrecto sin las BC del antisimétrico metidas (1,3,5).
-## Simétrico
-- el modo *15 - fuselage bending*, simétrico, no aparece en la solución simétrica.
-- el modo *26 - 2nd fuselage bending* tiene 28Hz en el completo y casi 35 en el simétrico el modo 13 de esa solución. es el modo que más error presenta.
-- mirando a las frecuencias del antisimétrico, el modo global 8, de 5.78 Hz, lo calcula como de 6.07 Hz.
-- el siguiente, el 9, algo de error también.
+- el modo *15 - fuselage bending*, simétrico, no aparece en la solución simétrica. CORRECCIÓN: esto es debido a no haber includio el punto 20000 en las boundary conditions.
+
 
 
 
