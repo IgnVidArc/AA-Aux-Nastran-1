@@ -39,19 +39,13 @@ Misma pinta que los fittings, mismas coordenadas, pero con el 6xxxx delante.
 70000 - Right Wing Pod (4 points)
 75000 - LEFT Wing Pod ( point)
 
-## Decisiones:
+## Decisiones en plano de simetría:
 **Masas**:
-- le quito la mitad al fuselaje, que estaba duplicado.
-- lo mismo para la vertical tail y el rudder
-
-# pending1
-Ver si hay que reducirle las stiffness a las barras de la vertical tail y el rudder.
-Entiendo que sería cambiándolo en el `PBAR`.
-- He creado el `MAT1 69` con 35000 Pa de rigidez, la mitad que los 70000 de MAT1 10 que se usa en todos los de más lados.
-
-# RESULTADOS
-- el modelo simétrico presenta tres modos como solido rígido y el antisimétrico seis. CORRECCIÓN: Esto era con el modelo incorrecto sin las BC del antisimétrico metidas (1,3,5).
-- el modo *15 - fuselage bending*, simétrico, no aparece en la solución simétrica. CORRECCIÓN: esto es debido a no haber includio el punto 20000 en las boundary conditions.
+- V-tail y rudder dejado solo la mitad de las CONM2.
+- para el fuselaje está divididas ambas partes a la mitad, para comprobar que también le sirve tener dos entradas de masas diferentes en el mismo grid point.
+**Rigideces**
+- para los elementos `CBAR`, hay que modificar las propiedades de las PBAR, las áreas, inercias, etc. *NO* sirve dividir el módulo elástico por la mitad.
+- lo mismo para los `CELAS`. aquí simplemente hay que dividir las rigideces a la mitad.
 
 
 
