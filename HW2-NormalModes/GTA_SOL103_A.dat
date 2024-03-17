@@ -1052,64 +1052,62 @@ SPC     100     40000   246
 $
 $ (A determinar si hay que imponerle algo a los auxiliary grids)
 $
-
 $
 $ Nose landing gear
 $
 $SPC    SID     G1      C1
-SPC     100     11000   246
+SPC     101     11000   246
 $
 $ ANTISYMMETRIC CONFIGURATION (ID:101)
 $------>------->------->------->
 $ Fueselage
 $SPC    SID     G1      C1
-SPC     100     10000   135
-SPC     100     10010   135
-SPC     100     10020   135
-SPC     100     10030   135
-SPC     100     10040   135
-SPC     100     10050   135
-SPC     100     10060   135
-SPC     100     10070   135
-SPC     100     10080   135
-SPC     100     10090   135
-SPC     100     10100   135
-SPC     100     10110   135
+SPC     101     10000   135
+SPC     101     10010   135
+SPC     101     10020   135
+SPC     101     10030   135
+SPC     101     10040   135
+SPC     101     10050   135
+SPC     101     10060   135
+SPC     101     10070   135
+SPC     101     10080   135
+SPC     101     10090   135
+SPC     101     10100   135
+SPC     101     10110   135
 $
 $ Vertical Tail
 $
 $SPC    SID     G1      C1
-SPC     100     30000   135
-SPC     100     30010   135
-SPC     100     30020   135
-SPC     100     30030   135
-SPC     100     30040   135
-SPC     100     30050   135
-SPC     100     30060   135
-SPC     100     30070   135
-SPC     100     30080   135
-SPC     100     30090   135
+SPC     101     30000   135
+SPC     101     30010   135
+SPC     101     30020   135
+SPC     101     30030   135
+SPC     101     30040   135
+SPC     101     30050   135
+SPC     101     30060   135
+SPC     101     30070   135
+SPC     101     30080   135
+SPC     101     30090   135
 $
 $ Rudder
 $
 $SPC    SID     G1      C1
-SPC     100     31010   135
-SPC     100     31020   135
-SPC     100     31030   135
-SPC     100     31040   135
-SPC     100     31050   135
+SPC     101     31010   135
+SPC     101     31020   135
+SPC     101     31030   135
+SPC     101     31040   135
+SPC     101     31050   135
 $
 $ Horizontal tail (point in symmetry plane)
 $
 $SPC    SID     G1      C1
-SPC     100     40000   135
+SPC     101     40000   135
 $
 $ (A determinar si hay que imponerle algo a los auxiliary grids)
-$
 $
 $ Nose landing gear
 $
 $SPC    SID     G1      C1
-SPC     100     11000   135
+SPC     101     11000   135
 
 ENDDATA
