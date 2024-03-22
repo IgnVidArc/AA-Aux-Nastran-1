@@ -1,0 +1,122 @@
+$ ======================================================================
+$                     GTAV2 Model - Full Aircraft
+$
+$                       SOL 112 - Transient Response Analysis
+$ ======================================================================
+$
+$ ------------------   Executive Control Deck   ------------------------
+$
+ID                  GTAV2 MODEL - DYNAMIC LANDING
+SOL                 112
+TIME                5000
+CEND
+$
+$ ------------------   Case Control Deck   -----------------------------
+$
+TITLE               = GTAV2 / Full A/C
+SUBTITLE            = Dynamic Landing
+$
+ECHO                = NONE
+SEALL               = ALL
+METHOD              = 200
+DISPLACEMENT (PLOT) = ALL
+RESVEC              = NO
+$
+SDAMPING            = 1000
+TSTEP               = 2000
+DLOAD               = 3000
+$
+OUTPUT(XYOUT)
+$
+XYPEAK ELFORCE/ 110050 ( 5)
+XYPEAK ELFORCE/ 110050 ( 7)
+XYPEAK ELFORCE/ 120010 ( 4)
+XYPEAK ELFORCE/ 120010 ( 6)
+XYPEAK ELFORCE/ 120010 ( 9)
+XYPEAK ACCEL / 10040 ( T3)
+XYPEAK ACCEL / 20170 ( T3)
+XYPEAK ACCEL / 25170 ( T3)
+XYPEAK ACCEL / 40070 ( T3)
+XYPEAK ACCEL / 45070 ( T3)
+$
+XYPUNCH ELFORCE/ 110050 ( 5)
+XYPUNCH ELFORCE/ 110050 ( 7)
+XYPUNCH ELFORCE/ 120010 ( 4)
+XYPUNCH ELFORCE/ 120010 ( 6)
+XYPUNCH ELFORCE/ 120010 ( 9)
+XYPUNCH ACCEL / 10040 ( T3)
+XYPUNCH ACCEL / 20170 ( T3)
+XYPUNCH ACCEL / 25170 ( T3)
+XYPUNCH ACCEL / 40070 ( T3)
+XYPUNCH ACCEL / 45070 ( T3)
+$
+$
+$ ------------------   Bulk Data Deck   --------------------------------
+$
+BEGIN BULK
+$
+PARAM   POST    -1
+PARAM   DDRMM   -1
+PARAM   MODACC  0
+$
+$ Model
+$ 
+INCLUDE 'GTA_Model_f.bdf'
+$
+SUPORT  20000   123456
+$
+$ Cut-off Frequency
+$
+$---1--><---2--><---3--><---4--><---5--><---6--><---7--><---8--><---9-->
+$ EIGRL    SID     V1      V2      ND    MSGLVL  MAXSET  SHFSCL   NORM  
+$
+EIGRL   200     0.0     50.0                                    MAX 
+$
+$ Damping Model
+$
+$---1--><---2--><---3--><---4--><---5--><---6--><---7--><---8--><---9--><--10-->
+$TABDMP1   TID    TYPE                                                  +
+$ +        f1      g1      f2      g2      f3      g3    ENDT
+$
+TABMDP1 1000    CRIT                                                    +
++       0.00    0.015    50.0    0.015   ENDT
+$
+$ Time step
+$
+$---1--><---2--><---3--><---4--><---5--><---6--><---7--><---8--><---9-->
+$ TSTEP SID     N1      DT1     NO1  
+$
+TSTEP   2000    20000   0.0001  10
+$
+$ External Loads
+$
+$---1--><---2--><---3--><---4--><---5--><---6--><---7--><---8--><---9-->
+$ DLOAD    SID      S      S1      L1      S2      L2     ...  
+$
+DLOAD   3000    1.0     1.0     311     1.0     313     1.0     321    +
++       1.0     323     1.0     331     1.0     333
+$
+$---1--><---2--><---3--><---4--><---5--><---6--><---7--><---8--><---9-->
+$ TLOAD1  SID     DAREA   DELAY   TYPE     TID
+$
+TLOAD1  311     31010                   3101
+TLOAD1  313     31030                   3103
+TLOAD1  321     32010                   3201
+TLOAD1  323     32030                   3203
+TLOAD1  331     33010                   3301
+TLOAD1  333     33030                   3303
+
+$
+$---1--><---2--><---3--><---4--><---5--><---6--><---7--><---8--><---9-->
+$ DAREA  SID       P1      C1      A1  
+$
+DAREA    31010  11000   1       1.0
+DAREA    31030  11000   3       1.0
+DAREA    32010  12000   1       1.0
+DAREA    32030  12000   3       1.0
+DAREA    33010  12500   1       1.0
+DAREA    33030  12500   3       1.0
+$
+INCLUDE 'GTA_Input_Pintle_Loads.tbd'
+$
+ENDDATA
